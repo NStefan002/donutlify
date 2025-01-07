@@ -1,0 +1,56 @@
+<!doctype html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Text Donut Formatter</title>
+        <link rel="stylesheet" href="style.css" />
+    </head>
+    <body>
+        <button id="mode-toggle" class="top-right">☀️</button>
+        <div class="container">
+            <header>
+                <h1>Text Donut Formatter</h1>
+                <p>
+                    Enter your text, set a radius, and watch it take the shape
+                    of a donut!
+                </p>
+            </header>
+            <main>
+                <div class="input-box">
+                    <textarea
+                        id="text-input"
+                        placeholder="Type your text here..."
+                    ></textarea>
+                </div>
+                <div class="output-box" id="output-box">
+                    <!-- Output will appear here -->
+                </div>
+            </main>
+            <div class="controls">
+                <input
+                    type="checkbox"
+                    id="repeat-text-checkbox"
+                    class="custom-checkbox"
+                />
+                <label for="repeat-text-checkbox">Repeat Text</label>
+                <label for="radius-input">Donut Radius:</label>
+                <input
+                    type="number"
+                    id="radius-input"
+                    value="40"
+                    min="7"
+                    max="60"
+                />
+            </div>
+            <div class="controls">
+                <button id="format-button">Format Text</button>
+                <button class="copy-button" id="copy-button" disabled>
+                    Copy to Clipboard
+                </button>
+            </div>
+        </div>
+        <div class="spinner" id="spinner"></div>
+        <script src="index.js"></script>
+    </body>
+</html>
